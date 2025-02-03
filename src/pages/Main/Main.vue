@@ -8,12 +8,12 @@
           </div>
       </div>
       <div :class="$style.botoesMain">
-          <button>Explorar Projetos</button>
-          <button>Conhecer Gabi</button>
+          <a href="#projetos"><button>Explorar Projetos</button></a>
+          <a href="#sobre-mim"><button>Conhecer Gabi</button></a>
       </div>
     </div>
 
-      <div :class="$style.ultimosProjetos">
+      <div id="projetos" :class="$style.ultimosProjetos">
         <span><h2>Últimos projetos</h2></span>
 
         <div :class="$style.projetosCards">
@@ -25,7 +25,7 @@
         </button>
       </div>
 
-      <div :class="$style.sobreMim">
+      <div id="sobre-mim" :class="$style.sobreMim">
 
         <span><h2>Conheça mais sobre mim</h2></span>
         <v-card :class="$style.cardSobreMim" class="mx-auto" max-width="750" >
@@ -187,6 +187,7 @@ export default {
 
 .ultimosProjetos {
   background-color: #FFFFFF;
+  scroll-margin-top: 200px;
   
   
   
@@ -236,6 +237,8 @@ export default {
 .sobreMim {
   background-color: #FFFFFF;
   color: black;
+  padding-top: 20px;
+  scroll-margin-top: 5px;
 
   h2 {
     padding-top: 50px;
