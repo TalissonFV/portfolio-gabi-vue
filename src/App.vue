@@ -17,9 +17,6 @@ export default {
       <main>
         <RouterView />
       </main>
-      <div height="10px" style="background-color: #F3A86D;">
-          <v-icon></v-icon>
-      </div>
       <Footer></Footer>
     </div>
 </template>
