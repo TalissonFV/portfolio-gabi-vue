@@ -49,6 +49,8 @@ nav {
     justify-content: space-around;
     background-color: #F3A86D;
     font-family: 'Epilogue', sans-serif;
+    position: fixed;
+    z-index: 100;
 
     .logoTitle{
       display: flex;
@@ -57,7 +59,7 @@ nav {
     }
 
     .navbarLogo {
-        width: 50px;
+        width: 70px;
         padding-left: 20px;
     }
 
@@ -66,6 +68,9 @@ nav {
         font-weight: 700;
         font-size: larger;
         padding-left: 20px;
+        padding-top: 15px;
+        font-size: 40px;
+        font-family: 'Sen', sans-serif;
     }
 
     .navbarMenuIcon {
@@ -88,7 +93,7 @@ nav {
             a {
                 color: inherit;
                 text-decoration-line: none;
-                font-weight: 700;
+                font-weight: 500;
             }
         }
     }

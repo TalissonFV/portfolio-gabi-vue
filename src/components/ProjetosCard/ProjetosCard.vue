@@ -2,7 +2,7 @@
   <div :class="$style.projetoCard">
     <v-card
       class="mx-auto"
-      max-width="344"
+      max-width="400"
     >
       <v-card-title :class="$style.projetoTitle" style="overflow: auto;">
         {{ this.projeto.title }}
@@ -60,11 +60,13 @@ export default {
 .projetoTitle {
   padding: 20px;
   background-color: #F3A86D;
+  color: white;
   
 }
 
 .projetoSubtitle {
   background-color: #F3A86D;
+  color: white;
 }
 
 </style>

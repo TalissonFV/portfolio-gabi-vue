@@ -1,20 +1,25 @@
 <template>
-  <footer>
-    
-    <div >
-        <img :src="logo"  :class="$style.footerLogo" ></img>
-        <span :class="$style.footerTitle">Gabi Kamui</span>
+    <div :class="$style.footerArea">
+        <div style="background-color: #F3CAAA; height: 45px;">
+        </div>
+
+        <footer>
+            <div >
+                <img :src="logo"  :class="$style.footerLogo" ></img>
+                <span :class="$style.footerTitle">Gabi Kamui</span>
+            </div>
+            <div :class="$style.footerRights">
+                <span> <v-icon icon="far fa-copyright" ></v-icon> {{new Date().getFullYear()}} Todos os direitos reservados </span>
+            </div>
+            <v-divider class="border-opacity-100" color="white" vertical></v-divider>
+            <div :class="$style.footerSocials">
+                <v-icon class="pr-16" icon="fab fa-instagram" ></v-icon>
+                <v-icon class="pr-5" icon="fab fa-linkedin" ></v-icon>
+                <v-icon class="pl-10" icon="fab fa-behance" ></v-icon>
+                
+            </div>
+        </footer>
     </div>
-    <div :class="$style.footerRights">
-        <span> <v-icon icon="far fa-copyright" aria-hidden="true"></v-icon> {{new Date().getFullYear()}} Todos os direitos reservados </span>
-    </div>
-    <div :class="$style.footerSocials">
-      <v-icon :class="$style.footerSocialsIcons" icon="fab fa-instagram" ></v-icon>
-      <v-icon :class="$style.footerSocialsIcons" icon="fab fa-linkedin" ></v-icon>
-      <v-icon icon="fab fa-behance" ></v-icon>
-        
-    </div>
-  </footer>
 
 </template>
 
@@ -26,9 +31,19 @@ import logo from '../../assets/img/logo-light.svg'
 
 <style lang="scss" module>
 footer {
+    width: 100%;
+    height: 186px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: relative;
+    bottom: 0pt;
+    left: 0pt;
 
     background-color: #CC6D59;
     margin-top: auto;
@@ -43,15 +58,23 @@ footer {
         padding-left: 20px;
         color: #F3A86D;
         font-weight: 700;
-        font-size: larger;
-        bottom: 20px;
+        font-size: 24px;
+        bottom: 8px;
         position: relative;
     }
     .footerSocials{
-        font-size: larger;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 45px;
+        
+    }
 
-        .footerSocialsIcons {
-            padding-right: 10px;
+    .footerRights {
+        i {
+            font-size: 16px;
+            padding-bottom: 4px;
         }
     }
 }
