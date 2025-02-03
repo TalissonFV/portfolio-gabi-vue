@@ -1,5 +1,8 @@
-# Vue 3 + Vite
+# Portfolio Gabi
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Portfolio de um designer criado a fim de testes de tecnologias e demonstração de habilidade de desenvolvimento web.
+### Demo
+[Live Preview]()
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+##
+Toda UI/UX desenvolvida a partir desse [projeto](https://www.figma.com/proto/mwF2b5wyXjW2He4htEW4sj/pb-web?node-id=35-352&t=6RvnC8EhLtSjZKte-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A33&starting-point-node-id=35%3A352)
