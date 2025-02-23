@@ -13,9 +13,9 @@
             </div>
             <v-divider class="border-opacity-100" color="white" vertical></v-divider>
             <div :class="$style.footerSocials">
-                <v-icon class="pr-16" icon="fab fa-instagram" ></v-icon>
-                <v-icon class="pr-5" icon="fab fa-linkedin" ></v-icon>
-                <v-icon class="pl-10" icon="fab fa-behance" ></v-icon>
+                <a style="text-decoration: none!important; color: white;" href=""><v-icon class="pr-16" icon="fab fa-instagram" ></v-icon></a>
+                <a style="text-decoration: none!important; color: white;" href="http://linkedin.com/in/gabriel-matheus-a2ab97210/"><v-icon class="pr-5" icon="fab fa-linkedin" ></v-icon></a>
+                <a style="text-decoration: none!important; color: white;" href="https://www.behance.net/gabikamui#"><v-icon class="pl-10" icon="fab fa-behance" ></v-icon></a>
                 
             </div>
         </footer>
@@ -63,6 +63,7 @@ footer {
         position: relative;
     }
     .footerSocials{
+        
         display: flex;
         flex-direction: row;
         justify-content: space-between;

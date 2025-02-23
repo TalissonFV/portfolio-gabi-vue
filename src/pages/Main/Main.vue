@@ -2,14 +2,15 @@
   <div :class="$style.mainBody" >
     <div :class="$style.mainPage">
       <div :class="$style.backgroundDiv">
-          <div :class="$style.textContent">
-              <h1>Eu sou um Designer gráfico, e amo sapos.</h1>
-              <span>Olá! Boas vindas ao meu portfólio, sou um estudante de Design Gráfico que adora aprender coisas novas, aqui você pode conhecer mais sobre mim e meus trabalhos.</span>
+        <div :class="$style.textContent">
+          <h1>Eu sou um Designer gráfico, e amo sapos.</h1>
+          <span>Olá! Boas vindas ao meu portfólio, sou um estudante de Design Gráfico que adora aprender coisas novas, aqui você pode conhecer mais sobre mim e meus trabalhos.</span>
+          
+          <div :class="$style.botoesMain">
+            <a href="#projetos"><button>Explorar Projetos</button></a>
+            <a href="#sobre-mim"><button>Conhecer Gabi</button></a>
           </div>
-      </div>
-      <div :class="$style.botoesMain">
-          <a href="#projetos"><button>Explorar Projetos</button></a>
-          <a href="#sobre-mim"><button>Conhecer Gabi</button></a>
+        </div>
       </div>
     </div>
 
@@ -98,91 +99,109 @@ export default {
 <style lang="scss" module>
 .mainBody {
   text-align: center;
-  height: 100%;
-  width: auto;
-  
+  width: 100%;
+
   .mainPage {
-      margin: 0;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      max-width: 1920px;
       background-image: url(../../assets/img/main-body.svg);
       background-repeat: no-repeat;
       background-position: center;
-      background-attachment:local;
-      background-size: 1920px 1080px;
-      height: 1080px;
-
-      @media (max-width: 1440px) {
-        background-size: 100% 800px;
-        height: 720px;
-
-        padding-bottom: 50px;
+      background-size: cover;
+      z-index: 0;
+      
+      @media (min-width: 1440px) {
+        background-size: 1440px auto;
       }
     }
 
+    @media (max-width: 768px) {
+      height: 80vh;
+      min-height: 500px;
+    }
+  }
 
-    h1 {  
-        font-weight: 700;
-        color: #FFFFFF;
+  .backgroundDiv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  .textContent {
+    text-align: justify;
+    max-width: 1400px;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+    padding-top: 150px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    h1 {
+      font-weight: 800;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
     }
 
-    .textContent{
-      height: 100%;
-      width: auto;
-      max-width: 1200px;
-      text-align: left;
-      padding-bottom: 100px;
-      padding-left: 7%;
-      font-family: 'Sen', sans-serif;
-      margin-left: 12%;
-      padding-top: 20%;
+    span {
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      display: block;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+  }
 
+  .botoesMain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
 
-      @media (min-width: 800px) and (max-width: 1440px) {
-          margin-left: 7%;
-          max-width: 720px;
-          padding-top: 20%;
-      }
+    button {
+      padding: 12px 24px;
+      background: #F3A86D;
+      border: 1px solid #FFFFFF;
+      border-radius: 18px;
+      color: #FFFFFF;
+      font-weight: 600;
+      min-width: 200px;
+      transition: all 0.3s ease;
+      cursor: pointer;
 
-      @media (max-width: 800px){
-          margin-left: 7%;
-          max-width: 800px;
-          padding-top: 50%;
-      }
-
-      h1 {
-        font-weight: 800;
-        font-size: 3vw;
-      }
-
-      span {
-        font-weight: 500;
-        font-size: 1.3vw;
-        max-width: fit-content;
+      @media (max-width: 480px) {
+        width: 100%;
+        max-width: 300px;
       }
     }
-
-    .botoesMain {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-
-
-        button {
-            padding: 9px 41px;
-        
-            /* primary/50 */
-            background: #F3A86D;
-            /* white */
-            border: 1px solid #FFFFFF;
-            border-radius: 18px;
-            color: #FFFFFF;
-            font-weight: 600;
-            min-width: 200px;
-        }
-
-    }
-
+  }
 }
 
 .ultimosProjetos {
