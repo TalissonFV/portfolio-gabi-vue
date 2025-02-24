@@ -100,6 +100,7 @@ export default {
 .mainBody {
   text-align: center;
   width: 100%;
+  margin-top:50px;
 
   .mainPage {
     position: relative;
@@ -162,17 +163,17 @@ export default {
     margin: 0 auto;
     h1 {
       font-weight: 800;
-      font-size: 2.5rem;
+      font-size: 4vh;
       line-height: 1.2;
       margin-bottom: 1.5rem;
     }
 
     span {
       font-weight: 500;
-      font-size: 1.2rem;
+      font-size: 2vh;
       line-height: 1.5;
       display: block;
-      max-width: 600px;
+      max-width: 1200px;
       margin: 0 auto 2rem;
     }
   }

@@ -58,7 +58,7 @@ footer {
         padding-left: 20px;
         color: #F3A86D;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 3vw;
         bottom: 8px;
         position: relative;
     }
@@ -68,14 +68,25 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        font-size: 45px;
+        font-size: 2vw;
         
     }
 
     .footerRights {
         i {
-            font-size: 16px;
+            font-size: 1.5vw;
             padding-bottom: 4px;
+        }
+
+        span {
+            font-size: 1vw;
+
+            @media (max-width: 1640px) {
+                font-size: 1.1vw;
+            }
+            @media (max-width: 800px) {
+                font-size: 1.5vw;
+            }
         }
     }
 }
